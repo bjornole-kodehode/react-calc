@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
+
+
+import { Button } from "./components/Button"
+import { Container } from "./Container.style"
+import { GlobalStyles } from "./GlobalStyles.style"
+import { StyledButton } from "./components/Buttons/Button.style"
 
 function App() {
+
+  const buttonValues = [
+    7,8,9,'DEL',
+    4,5,6,'+',
+    1,2,3,'-',
+    '.',0,'/','x',
+    'RESET','='
+  ]
+
+  const buttons = buttonValues.map((btn, i) => {
+    return (
+      <StyledButton value={btn} key={i}  ></StyledButton>
+    )
+  })
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <GlobalStyles />
+      {buttons}
+    </Container>
   );
 }
 
