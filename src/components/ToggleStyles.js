@@ -1,12 +1,14 @@
 import styled from "styled-components";
 
-export const Display = styled.div`
+export const ToggleStyles = styled.div`
   margin: 0 auto;
   min-width: 300px;
   max-width: 500px;
-  min-height: 100px;
-  background-color: hsl(224, 36%, 15%);
+  
+  font-weight: 700;
   color: #fff;
   border-radius: 8px;
-  margin-bottom: 20px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
 `;
